@@ -14,6 +14,7 @@ class Timer {
         this.fire('proceed');
         if (this.left == 0) {
           this.fire('end');
+          this.stop();
         }
       }, 1000);
       this.started = true;
@@ -32,8 +33,12 @@ class Timer {
     }
   }
 
-  print() {
-    return this.left;
+  getMin() {
+    return Math.floor(this.left / 60);
+  }
+
+  getSec() {
+    return this.left % 60;
   }
 
   on(event, callback) {

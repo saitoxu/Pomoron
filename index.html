@@ -3,14 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <title>Pomoron</title>
-    <link rel="stylesheet" type="text/css" href="src/style.css">
+    <link rel="stylesheet" href="src/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/style.css">
     <!-- <script type="text/javascript" src="src/timer.js"></script> -->
     <script type="text/javascript" src="src/index.js"></script>
   </head>
   <body>
-    <h1 id="test">Hello World!</h1>
-    <input type="button" id="start" value="start">
-    <input type="button" id="stop" value="stop">
-    <input type="button" id="pause" value="pause">
+    <div id="time"></div>
+    <div id="buttons">
+      <button id="start"><i class="fa fa-play" aria-hidden="true"></i></button>
+      <button id="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
+      <button id="stop"><i class="fa fa-stop" aria-hidden="true"></i></button>
+    </div>
+    <div id="counter"></div>
   </body>
 </html>

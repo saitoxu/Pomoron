@@ -8,7 +8,10 @@ function createWindow() {
   win = new BrowserWindow({
     width: 280,
     height: 100,
-    alwaysOnTop: true
+    alwaysOnTop: true,
+    resizable: false,
+    // transparent: true,
+    // frame: true
   });
   win.loadURL(`file://${__dirname}/index.html`);
   win.on('closed', () => {

@@ -1,2 +1,29 @@
-#test {
-  color: red; }
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: white; }
+  body #time {
+    font-size: 72px;
+    line-height: 78px;
+    margin-left: 8px;
+    width: 186px;
+    height: 78px;
+    float: left; }
+  body .work {
+    color: #FF5252; }
+  body .break {
+    color: #4CAF50; }
+  body #start,
+  body #pause,
+  body #stop {
+    border-radius: 20px;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    margin-top: 8px;
+    margin-left: 8px;
+    font-size: 16px;
+    color: #212121;
+    float: left; }
+  body #start i {
+    padding-left: 2px; }
