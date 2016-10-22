@@ -1,2 +1,2 @@
-# pomoron
-simple pomodoro technique timer
+# Pomoron
+Simple pomodoro technique timer
