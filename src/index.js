@@ -1,7 +1,7 @@
 const Timer = require('./src/timer');
 const $ = require('jquery');
-const workTimer = new Timer(1);
-const breakTimer = new Timer(1);
+const workTimer = new Timer(25);
+const breakTimer = new Timer(5);
 let count = 0;
 let currentTimer = workTimer;
 
@@ -32,34 +32,38 @@ breakTimer.on('proceed', () => {
 });
 
 $(document).ready(() => {
-  $('#time').text(format(currentTimer.getMin(), currentTimer.getSec()));
-  $('#time').addClass('work');
-  $('#counter').text(count);
+  init();
+
   $('#start').click(() => {
     currentTimer.start();
+    $('#start').hide();
+    $('#pause').show();
   });
 
   $('#stop').click(() => {
     currentTimer.stop();
     $('#time').text(format(currentTimer.getMin(), currentTimer.getSec()));
+    $('#pause').hide();
+    $('#start').show();
   });
 
   $('#pause').click(() => {
     currentTimer.pause();
+    $('#pause').hide();
+    $('#start').show();
   });
 });
 
+function init() {
+  $('#time').text(format(currentTimer.getMin(), currentTimer.getSec()));
+  $('#time').addClass('work');
+  $('#counter').text(count);
+  $('#pause').hide();
+}
+
 function format(min, sec) {
-  let time;
-  if (min < 10) {
-    time = '0' + min + ':';
-  } else {
-    time = min + ':';
-  }
-  if (sec < 10) {
-    time = time + '0' + sec;
-  } else {
-    time = time + sec;
-  }
+  let time = min < 10 ? '0' : '';
+  time += min + ':';
+  time += sec < 10 ? '0' + sec : sec;
   return time;
 }

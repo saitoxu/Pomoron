@@ -27,3 +27,9 @@ body {
     float: left; }
   body #start i {
     padding-left: 2px; }
+  body #counter {
+    width: 100px;
+    position: fixed;
+    left: 202px;
+    top: 50px;
+    font-size: 11px; }
