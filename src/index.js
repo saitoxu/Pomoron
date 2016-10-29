@@ -1,6 +1,6 @@
 const Timer = require('./src/timer');
 const $ = require('jquery');
-const workTimer = new Timer(25);
+const workTimer = new Timer(1);
 const breakTimer = new Timer(5);
 let count = 0;
 let currentTimer = workTimer;
@@ -13,10 +13,11 @@ workTimer.on('end', () => {
   $('#time').text(format(currentTimer.getMin(), currentTimer.getSec()));
   $('#time').removeClass('work');
   $('#time').addClass('break');
+  $('#start').show();
+  $('#pause').hide();
 });
 
 workTimer.on('proceed', () => {
-  // $('#time').text(format(workTimer.getMin(), workTimer.getSec()));
   $('#time').text(format(currentTimer.getMin(), currentTimer.getSec()));
 });
 
@@ -51,6 +52,11 @@ $(document).ready(() => {
     currentTimer.pause();
     $('#pause').hide();
     $('#start').show();
+  });
+
+  $('#clear').click(() => {
+    count = 0;
+    $('#counter').text(count);
   });
 });
 

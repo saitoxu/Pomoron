@@ -15,8 +15,14 @@ body {
   .work {
     color: #FF5252;
   }
+
   .break {
     color: #4CAF50;
+  }
+
+  .button {
+    cursor: pointer;
+    color: #212121;
   }
 
   #start,
@@ -29,19 +35,40 @@ body {
     margin-top: 8px;
     margin-left: 8px;
     font-size: 16px;
-    color: #212121;
     float: left;
   }
+
+  #clear {
+    border-radius: 20px;
+    border: 0;
+    margin-left: 23px;
+    font-weight: bold;
+    position: absolute;
+    top: 44px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .button:hover {
+    background-color: lightgray;
+  }
+
   #start {
     i {
       padding-left: 2px;
     }
   }
 
+  #tomato {
+    margin-top: 3px;
+    margin-left: 9px;
+    width: 24px;
+  }
+
   #counter {
     width: 100px;
     position: fixed;
-    left: 202px;
+    left: 229px;
     top: 46px;
     font-size: 16px;
   }

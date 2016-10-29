@@ -13,6 +13,9 @@ body {
     color: #FF5252; }
   body .break {
     color: #4CAF50; }
+  body .button {
+    cursor: pointer;
+    color: #212121; }
   body #start,
   body #pause,
   body #stop {
@@ -23,13 +26,27 @@ body {
     margin-top: 8px;
     margin-left: 8px;
     font-size: 16px;
-    color: #212121;
     float: left; }
+  body #clear {
+    border-radius: 20px;
+    border: 0;
+    margin-left: 23px;
+    font-weight: bold;
+    position: absolute;
+    top: 44px;
+    height: 20px;
+    width: 20px; }
+  body .button:hover {
+    background-color: lightgray; }
   body #start i {
     padding-left: 2px; }
+  body #tomato {
+    margin-top: 3px;
+    margin-left: 9px;
+    width: 24px; }
   body #counter {
     width: 100px;
     position: fixed;
-    left: 202px;
+    left: 229px;
     top: 46px;
     font-size: 16px; }
