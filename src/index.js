@@ -1,6 +1,6 @@
 const Timer = require('./src/timer');
 const $ = require('jquery');
-const workTimer = new Timer(1);
+const workTimer = new Timer(25);
 const breakTimer = new Timer(5);
 let count = 0;
 let currentTimer = workTimer;

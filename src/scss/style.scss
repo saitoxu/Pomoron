@@ -1,23 +1,45 @@
+@font-face {
+  font-family: 'dseg7';
+  src: url('../fonts/DSEG7Classic-BoldItalic.ttf') format('truetype');
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
-  background: white;
+  background: #C62828;
 
   #time {
-    font-size: 72px;
-    line-height: 78px;
+    font-size: 48px;
+    line-height: 62px;
     margin-left: 8px;
     width: 186px;
-    height: 78px;
+    height: 62px;
+    margin-top: 8px;
     float: left;
+    border-radius: 5px;
+    text-align: center;
+    background: #B2B998;
+    font-family: dseg7;
+  }
+
+  #time-background {
+    font-size: 48px;
+    font-family: dseg7;
+    color: black;
+    opacity: 0.1;
+    position: fixed;
+    margin-top: 13px;
+    margin-left: 18px;
   }
 
   .work {
-    color: #FF5252;
+    // color: #FF5252;
+    color: black;
   }
 
   .break {
-    color: #4CAF50;
+    // color: #4CAF50;
+    color: black;
   }
 
   .button {

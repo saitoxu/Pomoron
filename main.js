@@ -1,6 +1,9 @@
 const electron = require('electron');
 const app = electron.app;
+const Menu = electron.Menu;
 const BrowserWindow = electron.BrowserWindow;
+const template = [];
+const menu = Menu.buildFromTemplate(template);
 
 let win;
 
@@ -13,6 +16,7 @@ function createWindow() {
     // transparent: true,
     // frame: true
   });
+  win.webContents.openDevTools();
   win.loadURL(`file://${__dirname}/index.html`);
   win.on('closed', () => {
     win = null;
@@ -25,3 +29,4 @@ app.on('window-all-closed', () => {
     app.quit();
   }
 });
+Menu.setApplicationMenu(menu);
