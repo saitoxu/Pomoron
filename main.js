@@ -16,7 +16,7 @@ function createWindow() {
     // transparent: true,
     // frame: true
   });
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
   win.loadURL(`file://${__dirname}/index.html`);
   win.on('closed', () => {
     win = null;
