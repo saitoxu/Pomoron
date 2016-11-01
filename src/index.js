@@ -26,6 +26,8 @@ breakTimer.on('end', () => {
   $('#time').text(format(currentTimer.getMin(), currentTimer.getSec()));
   $('#time').removeClass('break');
   $('#time').addClass('work');
+  $('#start').show();
+  $('#pause').hide();
 });
 
 breakTimer.on('proceed', () => {
