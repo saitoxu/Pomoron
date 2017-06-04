@@ -39,3 +39,4 @@ jspm_packages
 src/.sass-cache/*
 .DS_Store
 Pomoron-darwin-x64/
+dst

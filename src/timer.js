@@ -1,5 +1,4 @@
 class Timer {
-
   constructor(minute) {
     this.max = minute * 60;
     this.left = this.max;

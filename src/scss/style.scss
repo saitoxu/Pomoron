@@ -3,6 +3,12 @@
   src: url('../fonts/DSEG7Classic-BoldItalic.ttf') format('truetype');
 }
 
+html {
+  width: 280px;
+  height: 100px;
+  overflow: hidden;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;

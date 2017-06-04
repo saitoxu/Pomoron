@@ -8,12 +8,12 @@ Simple pomodoro technique timer
 $ git clone https://github.com/saitoxu/Pomoron.git
 $ cd Pomoron
 $ yarn install
-$ electron main.js
+$ electron app.js
 $ yarn dev # another shell
 ```
 
 ## Release
 
 ```sh
-$ electron-packager . Pomoron --platform=win32 --arch=x64 --electron-version=1.6.10
+$ electron-packager . Pomoron --platform=darwin --arch=x64 --electron-version=1.6.10 --icon=src/img/icon.icns
 ```
