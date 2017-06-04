@@ -7,6 +7,14 @@ body {
   font-family: sans-serif;
   margin: 0;
   background: #C62828;
+  width: 280px;
+  height: 100px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   #time {
     font-size: 48px;
@@ -20,6 +28,8 @@ body {
     text-align: center;
     background: #B2B998;
     font-family: dseg7;
+    cursor: default;
+    color: black;
   }
 
   #time-background {
@@ -30,21 +40,18 @@ body {
     position: fixed;
     margin-top: 13px;
     margin-left: 18px;
-  }
-
-  .work {
-    // color: #FF5252;
-    color: black;
-  }
-
-  .break {
-    // color: #4CAF50;
-    color: black;
+    cursor: default;
   }
 
   .button {
     cursor: pointer;
     color: #212121;
+    &:hover {
+      background-color: lightgray;
+    }
+    &:focus {
+      outline: none !important;
+    }
   }
 
   #start,
@@ -71,10 +78,6 @@ body {
     width: 20px;
   }
 
-  .button:hover {
-    background-color: lightgray;
-  }
-
   #start {
     i {
       padding-left: 2px;
@@ -93,5 +96,6 @@ body {
     left: 229px;
     top: 46px;
     font-size: 16px;
+    cursor: default;
   }
 }

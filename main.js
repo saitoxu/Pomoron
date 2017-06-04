@@ -7,14 +7,14 @@ const menu = Menu.buildFromTemplate(template);
 
 let win;
 
+const isWindows = process.platform === 'win32'
+
 function createWindow() {
   win = new BrowserWindow({
     width: 280,
-    height: 100,
+    height: isWindows? 124 : 100,
     alwaysOnTop: true,
-    resizable: false,
-    // transparent: true,
-    // frame: true
+    resizable: false
   });
   // win.webContents.openDevTools();
   win.loadURL(`file://${__dirname}/index.html`);
